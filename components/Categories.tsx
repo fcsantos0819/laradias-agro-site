@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { PawPrint, Tractor, Trees, Wrench, Tolls } from "lucide-react";
+import { PawPrint, Tractor, Trees, Wrench, Hammer } from "lucide-react";
 
 const categories = [
   {
@@ -55,7 +55,7 @@ const categories = [
   },
    {
     title: "Ferramentas",
-    icon: Tolls,
+    icon: Hammer,
     images: [
       "/categorias/stihl-1.jpg",
       "/categorias/stihl-2.jpg",
