@@ -68,7 +68,7 @@ export default function Categories() {
           return (imgIndex + 1) % total;
         })
       );
-    }, 1000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
