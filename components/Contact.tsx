@@ -44,8 +44,8 @@ export default function Contact() {
 
       <div className="mt-8 grid gap-4 md:grid-cols-3">
         <div className="rounded-2xl border border-[#ecd7d7] bg-white p-5 shadow-sm">
-          <p className="text-sm font-semibold text-zinc-500">Telefone</p>
-          <p className="mt-1 text-lg font-bold text-zinc-900">(31) 3534-9488 / (31) 99685-9285</p>
+          <p className="text-sm font-semibold text-zinc-500">Telefone / WhatsApp</p>
+          <p className="mt-1 text-lg font-bold text-zinc-900">(31) 3534-9488</p>
         </div>
         <div className="rounded-2xl border border-[#ecd7d7] bg-white p-5 shadow-sm">
           <p className="text-sm font-semibold text-zinc-500">Instagram</p>
