@@ -21,6 +21,7 @@ export default function Header() {
           <Link href="#categorias">Categorias</Link>
           <Link href="#sobre">Sobre</Link>
           <Link href="#contato">Contato</Link>
+          <Link href="/produtos">Produtos</Link>
         </nav>
 
         <Link
