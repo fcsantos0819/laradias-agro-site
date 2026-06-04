@@ -43,7 +43,7 @@ const categories = [
   },
   {
     title: "Equipamentos STIHL",
-    icon: Wrench,
+    icon: Drill,
     images: [
       "/categorias/stihl-1.jpg",
       "/categorias/stihl-2.jpg",
