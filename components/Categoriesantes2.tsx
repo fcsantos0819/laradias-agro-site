@@ -5,6 +5,97 @@ import Image from "next/image";
 import { PawPrint, Tractor, Trees, Wrench } from "lucide-react";
 
 const categories = [
+ {
+  title: "Pet Shop",
+  icon: PawPrint,
+  images: [
+    "/categorias/pet-shop-1.jpg",
+    "/categorias/pet-shop-2.jpg",
+    "/categorias/pet-shop-3.jpg",
+    "/categorias/pet-shop-4.jpg",
+    "/categorias/pet-shop-5.jpg",
+  ],
+  description: "Rações, medicamentos, acessórios e higiene.",
+},
+  {
+  title: "Agropecuária",
+  icon: Tractor,
+  images: [
+    "/categorias/agro-1.jpg",
+    "/categorias/agro-2.jpg",
+    "/categorias/agro-3.jpg",
+    "/categorias/agro-4.jpg",
+    "/categorias/agro-5.jpg",
+  ],
+  description: "Produtos para bovinos, equinos e aves.",
+},
+  {
+    title: "Jardinagem",
+    icon: Trees,
+    images: [
+    "/categorias/jardinagem-1.jpg",
+    "/categorias/jardinagem-2.jpg",
+    "/categorias/jardinagem-3.jpg",
+    "/categorias/jardinagem-4.jpg",
+    "/categorias/jardinagem-5.jpg",
+    ],
+    description: "Sementes, adubos, ferramentas e mais.",
+  },
+  {
+    title: "Equipamentos STIHL",
+    icon: Wrench,
+    images: [
+    "/categorias/stihl-1.jpg",
+    "/categorias/stihl-2.jpg",
+    "/categorias/stihl-3.jpg",
+    "/categorias/stihl-4.jpg",
+    "/categorias/stihl-5.jpg",
+    ],
+    description: "Roçadeiras, motosserras e acessórios.",
+  },
+];
+
+export default function Categories() {
+  const [currentImages, setCurrentImages] = useState(
+    categories.map(() => 0)
+  );
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImages((prev) =>
+        prev.map((imgIndex, categoryIndex) => {
+          const total =
+            categories[categoryIndex].images.length;
+
+          return (imgIndex + 1) % total;
+        })
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+            <article
+              key={item.title}
+              className="overflow-hidden rounded-[1.75rem] border border-[#efd4d4] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+            >
+              <div className="relative h-48 w-full">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              "use client";
+
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { PawPrint, Tractor, Trees, Wrench } from "lucide-react";
+
+const categories = [
   {
     title: "Pet Shop",
     icon: PawPrint,
