@@ -37,8 +37,9 @@ export default function About() {
           <h3 className="mt-6 text-2xl font-black text-[#a40000]">Marca forte no digital</h3>
           <p className="mt-3 text-sm leading-7 text-zinc-600"></p>
             O horário de funcionamento é:
-          <p className="mt-3 text-sm leading-7 text-zinc-600">
+          <p className="mt-3 text-sm leading-7 text-zinc-600"></p>
             Segunda a sábado: 07:30 às 18:00
+          <p className="mt-3 text-sm leading-7 text-zinc-600">
             Domingo: 08:00 às 12:00
           </p>
         </div>
