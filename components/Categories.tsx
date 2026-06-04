@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { PawPrint, Tractor, Trees, Wrench } from "lucide-react";
+import { PawPrint, Tractor, Trees, Wrench, Tolls } from "lucide-react";
 
 const categories = [
   {
