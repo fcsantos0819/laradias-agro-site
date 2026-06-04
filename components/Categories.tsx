@@ -53,6 +53,18 @@ const categories = [
     ],
     description: "Roçadeiras, motosserras e acessórios.",
   },
+   {
+    title: "Ferramentas",
+    icon: Tolls,
+    images: [
+      "/categorias/stihl-1.jpg",
+      "/categorias/stihl-2.jpg",
+      "/categorias/stihl-3.jpg",
+      "/categorias/stihl-4.jpg",
+      "/categorias/stihl-5.jpg",
+    ],
+    description: "Ferramentas, furadeira, parafusadeira e acessórios em geral.",
+  },
 ];
 
 export default function Categories() {
