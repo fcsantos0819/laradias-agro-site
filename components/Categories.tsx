@@ -87,7 +87,7 @@ export default function Categories() {
 
   return (
     <section id="categorias" className="mx-auto max-w-7xl px-6 py-16">
-      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
         {categories.map((item, index) => {
           const Icon = item.icon;
 
