@@ -18,7 +18,7 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
-              href="https://wa.me/5531996859285"
+              href="https://wa.me/553135349488"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3 font-semibold text-[#a40000] shadow-lg transition hover:-translate-y-0.5"
@@ -52,7 +52,6 @@ export default function Hero() {
             <div className="rounded-2xl bg-white/10 p-4">
               <p className="text-sm font-semibold text-white/80">Contato / WhatsApp</p>
               <p className="mt-1 text-lg font-bold">(31) 3534-9488</p>
-              <p className="mt-1 text-lg font-bold">(31) 99685-9285</p>
             </div>
             <div className="rounded-2xl bg-white/10 p-4">
               <p className="text-sm font-semibold text-white/80">Instagram</p>
