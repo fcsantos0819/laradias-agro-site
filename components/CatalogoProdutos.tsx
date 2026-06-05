@@ -84,7 +84,7 @@ useEffect(() => {
     ).values(),
   ];
 
- /* const grupoUrl = searchParams.get("grupo");*/
+  const grupoUrl = searchParams.get("grupo");
 
 if (
   grupoUrl &&
