@@ -16,6 +16,8 @@ type Produto = {
   preco?: string;
   estoque?: string;
   imagem?: string;
+  promocao?: string;
+  precoPromocional?: string;
 };
 
 type ItemPedido = {
@@ -304,6 +306,14 @@ const marcas = [
   ]);
 
    const produtosAgrupados = useMemo(() => {
+
+const promocoes = useMemo(() => {
+  return produtos.filter(
+    (produto) =>
+      produto.promocao?.toUpperCase() === "SIM"
+  );
+}, [produtos]);
+
   const grupos: Record<string, Produto[]> = {};
 
   produtosFiltrados.forEach((produto) => {

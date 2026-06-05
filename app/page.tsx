@@ -54,6 +54,44 @@ export default function Home() {
       </section>
 
       <About />
+
+<section className="mx-auto mt-16 max-w-7xl px-6">
+  <h2 className="mb-6 text-3xl font-bold text-[#c40000]">
+    🔥 Promoções
+  </h2>
+
+  <div className="grid gap-6 md:grid-cols-4">
+
+    <a
+      href="https://wa.me/553135349488?text=Olá! Tenho interesse na promoção Quatree Gourmet Adulto."
+      target="_blank"
+      className="rounded-xl border-2 border-red-500 p-4 shadow hover:shadow-xl"
+    >
+      <img
+        src="/produtos/quatree-gourmet-adulto.jpg"
+        alt="Quatree Gourmet Adulto"
+        className="mx-auto h-40 object-contain"
+      />
+
+      <h3 className="mt-3 text-center font-semibold">
+        Quatree Gourmet Adulto
+      </h3>
+
+      {/* PREÇO PROMOCIONAL
+      <p className="text-center text-xl font-bold text-red-600">
+        R$ 89,90
+      </p>
+
+      <p className="text-center text-sm text-zinc-500 line-through">
+        R$ 109,90
+      </p>
+      */}
+
+    </a>
+
+  </div>
+</section>
+
       <Contact />
     </>
   );
