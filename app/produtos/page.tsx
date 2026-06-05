@@ -1,6 +1,12 @@
 import CatalogoProdutos from "@/components/CatalogoProdutos";
 
-export default function ProdutosPage() {
+export default async function ProdutosPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ grupo?: string }>;
+}) {
+  const params = await searchParams;
+
   return (
     <main className="mx-auto max-w-7xl px-6 py-16">
       <h1 className="text-4xl font-bold text-[#c40000]">
@@ -11,7 +17,9 @@ export default function ProdutosPage() {
         Consulte nosso catálogo de produtos.
       </p>
 
-      <CatalogoProdutos />
+      <CatalogoProdutos
+        grupoInicial={params.grupo || ""}
+      />
     </main>
   );
 }

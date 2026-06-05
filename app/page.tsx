@@ -19,8 +19,8 @@ export default function Home() {
         <div className="grid gap-6 md:grid-cols-4">
 
           <a
-            /*href="/produtos?grupo=Special Dog Adulto"*/
-            href="/produtos"
+            href="/produtos?grupo=Special Dog Adulto"
+            
             className="rounded-xl border p-4 shadow transition hover:border-[#c40000] hover:shadow-xl"
           >
             <img
@@ -35,8 +35,8 @@ export default function Home() {
           </a>
 
           <a
-            /*href="/produtos?grupo=Quatree Gourmet Adulto"*/
-            href="/produtos"
+            href="/produtos?grupo=Quatree Gourmet Adulto"
+           
             className="rounded-xl border p-4 shadow transition hover:border-[#c40000] hover:shadow-xl"
           >
             <img

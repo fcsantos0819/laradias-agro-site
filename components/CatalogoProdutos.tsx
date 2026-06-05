@@ -23,7 +23,11 @@ type ItemPedido = {
   quantidade: number;
 };
 
-export default function CatalogoProdutos() {
+export default function CatalogoProdutos({
+  grupoInicial = "",
+}: {
+  grupoInicial?: string;
+}) {
   /*const searchParams = useSearchParams();*/
   const [produtos, setProdutos] = useState<Produto[]>([]);
   const [busca, setBusca] = useState("");
@@ -31,6 +35,12 @@ export default function CatalogoProdutos() {
   const [marcaSelecionada, setMarcaSelecionada] = useState("");
   const [sugestoes, setSugestoes] = useState<Produto[]>([]);
   const buscaRef = useRef<HTMLDivElement>(null);
+
+useEffect(() => {
+  if (grupoInicial) {
+    setBusca(grupoInicial);
+  }
+}, [grupoInicial]);
 
  /*useEffect(() => {
   const grupo = searchParams.get("grupo");
