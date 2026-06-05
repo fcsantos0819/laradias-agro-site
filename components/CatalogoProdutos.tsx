@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Papa from "papaparse";
 import Image from "next/image";
 import { useRef } from "react";
-{/*import { useSearchParams } from "next/navigation";*/}
+/*import { useSearchParams } from "next/navigation";*/
 
 type Produto = {
   codigo: string;
@@ -61,8 +61,6 @@ useEffect(() => {
   };
 }, []);
 
-<div ref={buscaRef} className="relative"></div>
-
 useEffect(() => {
   if (!busca.trim()) {
     setSugestoes([]);
@@ -84,7 +82,7 @@ useEffect(() => {
     ).values(),
   ];
 
-  const grupoUrl = searchParams.get("grupo");
+  /*const grupoUrl = searchParams.get("grupo");
 
 if (
   grupoUrl &&
@@ -94,6 +92,7 @@ if (
 } else {
   setSugestoes(gruposUnicos.slice(0, 8));
 }
+  */
 
 }, [busca, produtos]);
 
@@ -361,7 +360,7 @@ const marcas = [
   </p>
 )}
 
-<div className="relative">
+<div ref={buscaRef} className="relative">
   <input
     type="text"
     placeholder="Pesquisar produto..."
