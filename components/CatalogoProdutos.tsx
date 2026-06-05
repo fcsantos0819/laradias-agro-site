@@ -32,14 +32,14 @@ export default function CatalogoProdutos() {
   const [sugestoes, setSugestoes] = useState<Produto[]>([]);
   const buscaRef = useRef<HTMLDivElement>(null);
 
- {/*useEffect(() => {
+ *useEffect(() => {
   const grupo = searchParams.get("grupo");
 
   if (grupo) {
     setBusca(grupo);
     setSugestoes([]);
   }
-}, [searchParams]);*/}
+}, [searchParams]);
 
 useEffect(() => {
   const handleClickOutside = (event: MouseEvent) => {
