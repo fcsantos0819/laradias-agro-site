@@ -1,31 +1,31 @@
-Codigo;Produto;Categoria;Marca;Preço;Estoque
-101;Quatre Gourmet Filhote 10kg;Ração;Quatree;1,2;25
-102;Quatre Gourmet Filhote 15kg;Ração;Quatree;1,2;25
-103;Quatre Gourmet Filhote 20kg;Ração;Quatree;1,2;25
-104;Quatre Gourmet Adulto 10kg;Ração;Quatree;1,2;25
-105;Quatre Gourmet Adulto 15kg;Ração;Quatree;1,2;25
-106;Quatre Gourmet Adulto 20kg;Ração;Quatree;1,2;25
-107;Quatre Gourmet Raças Pequena 10kg;Ração;Quatree;1,2;25
-108;Quatre Gourmet Raças Pequena 15kg;Ração;Quatree;1,2;25
-109;Quatre Gourmet Raças Pequena 20kg;Ração;Quatree;1,2;25
-110;Special Dog Adulto Carne 15kg;Ração;Special Dog;1,2;25
-111;Special Dog Adulto Carne 20kg;Ração;Special Dog;1,2;25
-112;Premier Caes Ambientes Internos 1kg;Ração;Premier;1,2;25
-113;Premier Caes Ambientes Internos 2,5kg;Ração;Premier;1,2;25
-114;Foster One 20kg;Ração;foster;1,2;25
-115;Hot Cat Mix 10kg;Ração;Hot Dog;1,2;25
-116;Hot Cat Mix 20kg;Ração;Hot Dog;1,2;25
-117;Golden Gatos 3kg;Ração;Golden;1,2;25
-118;Golden Gatos 10kg;Ração;Golden;1,2;25
-119;Qualis Postura 5kg;Ração;Qualis;1,2;25
-120;Qualis Postura 20kg;Ração;Qualis;1,2;25
-121;Farelo de Trigo 30kg;Ração;S Marca;1,2;25
-122;Fubá 5kg;Ração;S Marca;1,2;25
-123;Fubá 20kg;Ração;S Marca;1,2;25
-124;Fubá 40kg;Ração;S Marca;1,2;25
-125;Milho 5kg;Ração;S Marca;1,2;25
-126;Milho 25kg;Ração;S Marca;1,2;25
-127;Milho 50kg;Ração;S Marca;1,2;25
+codigo;produto;categoria;marca;preco;estoque
+101;Quatre Gourmet Filhote 10kg;RaÃ§Ã£o;Quatree;1,2;25
+102;Quatre Gourmet Filhote 15kg;RaÃ§Ã£o;Quatree;1,2;25
+103;Quatre Gourmet Filhote 20kg;RaÃ§Ã£o;Quatree;1,2;25
+104;Quatre Gourmet Adulto 10kg;RaÃ§Ã£o;Quatree;1,2;25
+105;Quatre Gourmet Adulto 15kg;RaÃ§Ã£o;Quatree;1,2;25
+106;Quatre Gourmet Adulto 20kg;RaÃ§Ã£o;Quatree;1,2;25
+107;Quatre Gourmet RaÃ§as Pequena 10kg;RaÃ§Ã£o;Quatree;1,2;25
+108;Quatre Gourmet RaÃ§as Pequena 15kg;RaÃ§Ã£o;Quatree;1,2;25
+109;Quatre Gourmet RaÃ§as Pequena 20kg;RaÃ§Ã£o;Quatree;1,2;25
+110;Special Dog Adulto Carne 15kg;RaÃ§Ã£o;Special Dog;1,2;25
+111;Special Dog Adulto Carne 20kg;RaÃ§Ã£o;Special Dog;1,2;25
+112;Premier Caes Ambientes Internos 1kg;RaÃ§Ã£o;Premier;1,2;25
+113;Premier Caes Ambientes Internos 2,5kg;RaÃ§Ã£o;Premier;1,2;25
+114;Foster One 20kg;RaÃ§Ã£o;foster;1,2;25
+115;Hot Cat Mix 10kg;RaÃ§Ã£o;Hot Dog;1,2;25
+116;Hot Cat Mix 20kg;RaÃ§Ã£o;Hot Dog;1,2;25
+117;Golden Gatos 3kg;RaÃ§Ã£o;Golden;1,2;25
+118;Golden Gatos 10kg;RaÃ§Ã£o;Golden;1,2;25
+119;Qualis Postura 5kg;RaÃ§Ã£o;Qualis;1,2;25
+120;Qualis Postura 20kg;RaÃ§Ã£o;Qualis;1,2;25
+121;Farelo de Trigo 30kg;RaÃ§Ã£o;S Marca;1,2;25
+122;FubÃ¡ 5kg;RaÃ§Ã£o;S Marca;1,2;25
+123;FubÃ¡ 20kg;RaÃ§Ã£o;S Marca;1,2;25
+124;FubÃ¡ 40kg;RaÃ§Ã£o;S Marca;1,2;25
+125;Milho 5kg;RaÃ§Ã£o;S Marca;1,2;25
+126;Milho 25kg;RaÃ§Ã£o;S Marca;1,2;25
+127;Milho 50kg;RaÃ§Ã£o;S Marca;1,2;25
 128;Calcario a granel;Adubos;S Marca;1,2;25
 129;Calcario 20kg;Adubos;S Marca;1,2;25
 130;Calcario 50kg;Adubos;S Marca;1,2;25
@@ -33,17 +33,17 @@ Codigo;Produto;Categoria;Marca;Preço;Estoque
 132;Adulbo NPK 50kg;Adubos;S Marca;1,2;25
 133;Chapel de palha;Modas Acessorios;S Marca;1,2;25
 134;Chapel de feltro;Modas Acessorios;S Marca;1,2;25
-135;Bota de Segurança;Modas Acessorios;S Marca;1,2;25
+135;Bota de SeguranÃ§a;Modas Acessorios;S Marca;1,2;25
 136;Bota Country;Modas Acessorios;S Marca;1,2;25
 137;Bota PVC;Modas Acessorios;S Marca;1,2;25
-138;Vara de pesca;Caça e Pesca;S Marca;1,2;25
-139;Anzol;Caça e Pesca;S Marca;1,2;25
-140;Morinete;Caça e Pesca;S Marca;1,2;25
-141;Chumbada;Caça e Pesca;S Marca;1,2;25
-142;Linha para pesca;Caça e Pesca;S Marca;1,2;25
+138;Vara de pesca;CaÃ§a e Pesca;S Marca;1,2;25
+139;Anzol;CaÃ§a e Pesca;S Marca;1,2;25
+140;Morinete;CaÃ§a e Pesca;S Marca;1,2;25
+141;Chumbada;CaÃ§a e Pesca;S Marca;1,2;25
+142;Linha para pesca;CaÃ§a e Pesca;S Marca;1,2;25
 143;Aparador de grama;Jardinagem;S Marca;1,2;25
 144;Cortador de grama;Jardinagem;S Marca;1,2;25
-145;Roçadeira;Jardinagem;S Marca;1,2;25
+145;RoÃ§adeira;Jardinagem;S Marca;1,2;25
 146;Soprador;Jardinagem;Stihl;1,2;25
 147;Moto-serra;Jardinagem;Stihl;1,2;25
 148;Lavadoras;Jardinagem;S Marca;1,2;25
@@ -58,9 +58,9 @@ Codigo;Produto;Categoria;Marca;Preço;Estoque
 157;Decantador;Piscinas;S Marca;1,2;25
 158;Mangueira de Jardim;Jardinagem;S Marca;1,2;25
 159;Mangueira para piscina;Piscinas;S Marca;1,2;25
-160;Telas;Manutenção;S Marca;1,2;25
-161;Lona;Manutenção;S Marca;1,2;25
-162;Carrinho de Mão;Manutenção;S Marca;1,2;25
+160;Telas;ManutenÃ§Ã£o;S Marca;1,2;25
+161;Lona;ManutenÃ§Ã£o;S Marca;1,2;25
+162;Carrinho de MÃ£o;ManutenÃ§Ã£o;S Marca;1,2;25
 163;Enxadas;Ferragens;S Marca;1,2;25
 164;Enxadao;Ferragens;S Marca;1,2;25
 165;Foice;Ferragens;S Marca;1,2;25
