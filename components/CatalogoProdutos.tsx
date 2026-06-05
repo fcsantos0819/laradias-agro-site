@@ -80,11 +80,18 @@ useEffect(() => {
   const gruposUnicos = [
     ...new Map(
       produtos
-        .filter((produto) =>
-          produto.grupo
-            ?.toLowerCase()
-            .includes(busca.toLowerCase())
-        )
+        
+      .filter((produto) => {
+  const termo = busca.toLowerCase();
+
+  return (
+    produto.grupo?.toLowerCase().includes(termo) ||
+    produto.produto?.toLowerCase().includes(termo) ||
+    produto.marca?.toLowerCase().includes(termo) ||
+    produto.categoria?.toLowerCase().includes(termo)
+  );
+})
+
         .map((produto) => [
           produto.grupo,
           produto,
@@ -265,11 +272,13 @@ const marcas = [
 
     return produtos
       .filter((produto) => {
+       
         const buscaOk =
-          !busca ||
-          produto.grupo?.toLowerCase().includes(termo) ||
-          produto.marca?.toLowerCase().includes(termo) ||
-          produto.categoria?.toLowerCase().includes(termo);
+            !busca ||
+            produto.grupo?.toLowerCase().includes(termo) ||
+            produto.produto?.toLowerCase().includes(termo) ||
+            produto.marca?.toLowerCase().includes(termo) ||
+            produto.categoria?.toLowerCase().includes(termo);
 
         const categoriaOk =
           !categoriaSelecionada ||
