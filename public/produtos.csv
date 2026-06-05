@@ -1,67 +1,68 @@
-codigo;produto;categoria;marca;preco;estoque
-101;Quatre Gourmet Filhote 10kg;Ração;Quatree;1,2;25
-102;Quatre Gourmet Filhote 15kg;Ração;Quatree;1,2;25
-103;Quatre Gourmet Filhote 20kg;Ração;Quatree;1,2;25
-104;Quatre Gourmet Adulto 10kg;Ração;Quatree;1,2;25
-105;Quatre Gourmet Adulto 15kg;Ração;Quatree;1,2;25
-106;Quatre Gourmet Adulto 20kg;Ração;Quatree;1,2;25
-107;Quatre Gourmet Raças Pequena 10kg;Ração;Quatree;1,2;25
-108;Quatre Gourmet Raças Pequena 15kg;Ração;Quatree;1,2;25
-109;Quatre Gourmet Raças Pequena 20kg;Ração;Quatree;1,2;25
-110;Special Dog Adulto Carne 15kg;Ração;Special Dog;1,2;25
-111;Special Dog Adulto Carne 20kg;Ração;Special Dog;1,2;25
-112;Premier Caes Ambientes Internos 1kg;Ração;Premier;1,2;25
-113;Premier Caes Ambientes Internos 2,5kg;Ração;Premier;1,2;25
-114;Foster One 20kg;Ração;foster;1,2;25
-115;Hot Cat Mix 10kg;Ração;Hot Dog;1,2;25
-116;Hot Cat Mix 20kg;Ração;Hot Dog;1,2;25
-117;Golden Gatos 3kg;Ração;Golden;1,2;25
-118;Golden Gatos 10kg;Ração;Golden;1,2;25
-119;Qualis Postura 5kg;Ração;Qualis;1,2;25
-120;Qualis Postura 20kg;Ração;Qualis;1,2;25
-121;Farelo de Trigo 30kg;Ração;S Marca;1,2;25
-122;Fubá 5kg;Ração;S Marca;1,2;25
-123;Fubá 20kg;Ração;S Marca;1,2;25
-124;Fubá 40kg;Ração;S Marca;1,2;25
-125;Milho 5kg;Ração;S Marca;1,2;25
-126;Milho 25kg;Ração;S Marca;1,2;25
-127;Milho 50kg;Ração;S Marca;1,2;25
-128;Calcario a granel;Adubos;S Marca;1,2;25
-129;Calcario 20kg;Adubos;S Marca;1,2;25
-130;Calcario 50kg;Adubos;S Marca;1,2;25
-131;Adulbo NPK a granel;Adubos;S Marca;1,2;25
-132;Adulbo NPK 50kg;Adubos;S Marca;1,2;25
-133;Chapel de palha;Modas Acessorios;S Marca;1,2;25
-134;Chapel de feltro;Modas Acessorios;S Marca;1,2;25
-135;Bota de Segurança;Modas Acessorios;S Marca;1,2;25
-136;Bota Country;Modas Acessorios;S Marca;1,2;25
-137;Bota PVC;Modas Acessorios;S Marca;1,2;25
-138;Vara de pesca;Caça e Pesca;S Marca;1,2;25
-139;Anzol;Caça e Pesca;S Marca;1,2;25
-140;Morinete;Caça e Pesca;S Marca;1,2;25
-141;Chumbada;Caça e Pesca;S Marca;1,2;25
-142;Linha para pesca;Caça e Pesca;S Marca;1,2;25
-143;Aparador de grama;Jardinagem;S Marca;1,2;25
-144;Cortador de grama;Jardinagem;S Marca;1,2;25
-145;Roçadeira;Jardinagem;S Marca;1,2;25
-146;Soprador;Jardinagem;Stihl;1,2;25
-147;Moto-serra;Jardinagem;Stihl;1,2;25
-148;Lavadoras;Jardinagem;S Marca;1,2;25
-149;Tubo PVC;Conexoes;Tigre;1,2;25
-150;Joelho PVC;Conexoes;Tigre;1,2;25
-151;Cabos eletricos;Eletrico;Fiolux;1,2;25
-152;Lampada;Eletrico;Fiolux;1,2;25
-153;Cloro para piscina;Piscinas;S Marca;1,2;25
-154;Algicida;Piscinas;S Marca;1,2;25
-155;Clarificante;Piscinas;S Marca;1,2;25
-156;Elevador de PH;Piscinas;S Marca;1,2;25
-157;Decantador;Piscinas;S Marca;1,2;25
-158;Mangueira de Jardim;Jardinagem;S Marca;1,2;25
-159;Mangueira para piscina;Piscinas;S Marca;1,2;25
-160;Telas;Manutenção;S Marca;1,2;25
-161;Lona;Manutenção;S Marca;1,2;25
-162;Carrinho de Mão;Manutenção;S Marca;1,2;25
-163;Enxadas;Ferragens;S Marca;1,2;25
-164;Enxadao;Ferragens;S Marca;1,2;25
-165;Foice;Ferragens;S Marca;1,2;25
-166;Roundup;Herbicida;S Marca;1,2;25
+codigo;produto;categoria;grupo;tamanho;marca;preco;estoque;imagem
+101;Quatree Gourmet Filhote 10kg;Ração;Quatree Gourmet Filhote;10kg;Quatree;1,2;25;/produtos/sem-imagem.jpg
+102;Quatree Gourmet Filhote 15kg;Ração;Quatree Gourmet Filhote;15kg;Quatree;1,2;25;/produtos/sem-imagem.jpg
+103;Quatree Gourmet Filhote 20kg;Ração;Quatree Gourmet Filhote;20kg;Quatree;1,2;25;/produtos/sem-imagem.jpg
+104;Quatree Gourmet Adulto 10kg;Ração;Quatree Gourmet Adulto;10kg;Quatree;1,2;25;/produtos/quatree-gourmet-adulto.jpg
+105;Quatree Gourmet Adulto 15kg;Ração;Quatree Gourmet Adulto;15kg;Quatree;1,2;25;/produtos/quatree-gourmet-adulto.jpg
+106;Quatree Gourmet Adulto 20kg;Ração;Quatree Gourmet Adulto;20kg;Quatree;1,2;25;/produtos/quatree-gourmet-adulto.jpg
+107;Quatree Gourmet Raças Pequena 10kg;Ração;Quatree Gourmet ;10kg;Quatree;1,2;25;/produtos/sem-imagem.jpg
+108;Quatree Gourmet Raças Pequena 15kg;Ração;Quatree Gourmet Racas Pequenas;15kg;Quatree;1,2;25;/produtos/sem-imagem.jpg
+109;Quatree Gourmet Raças Pequena 20kg;Ração;Quatree Gourmet Racas Pequenas;20kg;Quatree;1,2;25;/produtos/sem-imagem.jpg
+110;Special Dog Adulto Carne 15kg;Ração;Special Dog Adulto;15kg;Special Dog;1,2;25;/produtos/quatree-hotdog-racas-grandes.jpg
+111;Special Dog Adulto Carne 20kg;Ração;Special Dog Adulto;20kg;Special Dog;1,2;25;/produtos/quatree-hotdog-racas-grandes.jpg
+112;Premier Caes Ambientes Internos 1kg;Ração;Quatree Premier Adulto;1kg;Quatree;1,2;25;/produtos/sem-imagem.jpg
+113;Premier Caes Ambientes Internos 5kg;Ração;Quatree Premier Adulto;5kg;Quatree;1,2;25;/produtos/sem-imagem.jpg
+114;Foster One 20kg;Ração;Foster One;20kg;foster;1,2;25;/produtos/sem-imagem.jpg
+115;Hot Cat Mix 10kg;Ração;Hot Cat Mix;10kg;Hot Dog;1,2;25;/produtos/hotcat-mix.jpg
+116;Hot Cat Mix 20kg;Ração;Hot Cat Mix;20kg;Hot Dog;1,2;25;/produtos/hotcat-mix.jpg
+117;Golden Gatos 3kg;Ração;Quatre Gatos;3kg;Golden;1,2;25;/produtos/sem-imagem.jpg
+118;Quatree Supreme Gatos Castrado 10kg;Ração;Quatree Supreme Gatos Castrados;10kg;Golden;1,2;25;/produtos/quatree-supreme-gatos-castrados.jpg
+195;Quatree Supreme Gatos Castrado 30kg;Ração;Quatree Supreme Gatos Castrados;30kg;Golden;1,2;25;/produtos/quatree-supreme-gatos-castrados.jpg
+119;Qualis Postura 5kg;Ração;Qualis Postura;5kg;Qualis;1,2;25;/produtos/sem-imagem.jpg
+120;Qualis Postura 20kg;Ração;Qualis Postura;20kg;Qualis;1,2;25;/produtos/sem-imagem.jpg
+121;Farelo de Trigo 30kg;Ração;s marca;30kg;S Marca;1,2;25;/produtos/sem-imagem.jpg
+122;Fuba 5kg;Ração;s marca;5kg;S Marca;1,2;25;/produtos/sem-imagem.jpg
+123;Fuba 20kg;Ração;s marca;20kg;S Marca;1,2;25;/produtos/sem-imagem.jpg
+124;Fuba 40kg;Ração;s marca;40kg;S Marca;1,2;25;/produtos/sem-imagem.jpg
+125;Milho 5k;Ração;s marca;5kg;S Marca;1,2;25;/produtos/sem-imagem.jpg
+126;Milho 25;Ração;s marca;25kg;S Marca;1,2;25;/produtos/sem-imagem.jpg
+127;Milho 50kg;Ração;s marca;50kg;S Marca;1,2;25;/produtos/sem-imagem.jpg
+128;Calcario a granel;Adubos;s marca;granel;S Marca;1,2;25;/produtos/sem-imagem.jpg
+129;Calcario 20kg;Adubos;s marca;20kg;S Marca;1,2;25;/produtos/sem-imagem.jpg
+130;Calcario 50kg;Adubos;s marca;50kg;S Marca;1,2;25;/produtos/sem-imagem.jpg
+131;Adulbo NPK  granel;Adubos;s marca;granel;S Marca;1,2;25;/produtos/sem-imagem.jpg
+132;Adulbo NPK 50kg;Adubos;s marca;50kg;S Marca;1,2;25;/produtos/sem-imagem.jpg
+133;Chapel de palha;Modas Acessorios;s marca;palha;S Marca;1,2;25;/produtos/sem-imagem.jpg
+134;Chapel de feltro;Modas Acessorios;s marca;feltro;S Marca;1,2;25;/produtos/sem-imagem.jpg
+135;Bota de Segurança;Modas Acessorios;s marca;a;S Marca;1,2;25;/produtos/sem-imagem.jpg
+136;Bota Country;Modas Acessorios;s marca;Country;S Marca;1,2;25;/produtos/sem-imagem.jpg
+137;Bota PVC;Modas Acessorios;s marca;PVC;S Marca;1,2;25;/produtos/sem-imagem.jpg
+138;Vara de pesca;Caça e Pesca;s marca;pesca;S Marca;1,2;25;/produtos/sem-imagem.jpg
+139;Anzol;Caça e Pesca;s marca;Anzol;S Marca;1,2;25;/produtos/sem-imagem.jpg
+140;Morinete;Caça e Pesca;s marca;Morinete;S Marca;1,2;25;/produtos/sem-imagem.jpg
+141;Chumbada;Caça e Pesca;s marca;Chumbada;S Marca;1,2;25;/produtos/sem-imagem.jpg
+142;Linha para pesca;Caça e Pesca;s marca;pesca;S Marca;1,2;25;/produtos/sem-imagem.jpg
+143;Aparador de grama;Jardinagem;s marca;grama;S Marca;1,2;25;/produtos/sem-imagem.jpg
+144;Cortador de grama;Jardinagem;s marca;grama;S Marca;1,2;25;/produtos/sem-imagem.jpg
+145;Roçadeira;Jardinagem;s marca;adeira;S Marca;1,2;25;/produtos/sem-imagem.jpg
+146;Soprador;Jardinagem;stihl;Soprador;Stihl;1,2;25;/produtos/sem-imagem.jpg
+147;Moto-serra;Jardinagem;stihl;serra;Stihl;1,2;25;/produtos/sem-imagem.jpg
+148;Lavadoras;Jardinagem;s marca;Lavadoras;S Marca;1,2;25;/produtos/sem-imagem.jpg
+149;Tubo PVC;Conexoes;tigre;PVC;Tigre;1,2;25;/produtos/sem-imagem.jpg
+150;Joelho PVC;Conexoes;tigre;PVC;Tigre;1,2;25;/produtos/sem-imagem.jpg
+151;Cabos eletricos;Eletrico;fiolux;eletricos;Fiolux;1,2;25;/produtos/sem-imagem.jpg
+152;Lampada;Eletrico;fiolux;Lampada;Fiolux;1,2;25;/produtos/sem-imagem.jpg
+153;Cloro para piscina;Piscinas;s marca;piscina;S Marca;1,2;25;/produtos/sem-imagem.jpg
+154;Algicida;Piscinas;s marca;Algicida;S Marca;1,2;25;/produtos/sem-imagem.jpg
+155;Clarificante;Piscinas;s marca;Clarificante;S Marca;1,2;25;/produtos/sem-imagem.jpg
+156;Elevador de PH;Piscinas;s marca;PH;S Marca;1,2;25;/produtos/sem-imagem.jpg
+157;Decantador;Piscinas;s marca;Decantador;S Marca;1,2;25;/produtos/sem-imagem.jpg
+158;Mangueira de Jardim;Jardinagem;s marca;Jardim;S Marca;1,2;25;/produtos/sem-imagem.jpg
+159;Mangueira para piscina;Piscinas;s marca;piscina;S Marca;1,2;25;/produtos/sem-imagem.jpg
+160;Telas;Manutenção;s marca;Telas;S Marca;1,2;25;/produtos/sem-imagem.jpg
+161;Lona;Manutenção;s marca;Lona;S Marca;1,2;25;/produtos/sem-imagem.jpg
+162;Carrinho de Mão;Manutenção;s marca;o;S Marca;1,2;25;/produtos/sem-imagem.jpg
+163;Enxadas;Ferragens;s marca;Enxadas;S Marca;1,2;25;/produtos/sem-imagem.jpg
+164;Enxadao;Ferragens;s marca;Enxadao;S Marca;1,2;25;/produtos/sem-imagem.jpg
+165;Foice;Ferragens;s marca;Foice;S Marca;1,2;25;/produtos/sem-imagem.jpg
+166;Roundup;Herbicida;s marca;Roundup;S Marca;1,2;25;/produtos/sem-imagem.jpg

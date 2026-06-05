@@ -2,14 +2,20 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Papa from "papaparse";
+import Image from "next/image";
+import { useRef } from "react";
+import { useSearchParams } from "next/navigation";
 
 type Produto = {
   codigo: string;
   produto: string;
   categoria: string;
+  grupo: string;
+  tamanho: string;
   marca: string;
   preco?: string;
   estoque?: string;
+  imagem?: string;
 };
 
 type ItemPedido = {
@@ -18,11 +24,44 @@ type ItemPedido = {
 };
 
 export default function CatalogoProdutos() {
+  const searchParams = useSearchParams();
   const [produtos, setProdutos] = useState<Produto[]>([]);
   const [busca, setBusca] = useState("");
   const [categoriaSelecionada, setCategoriaSelecionada] = useState("");
   const [marcaSelecionada, setMarcaSelecionada] = useState("");
   const [sugestoes, setSugestoes] = useState<Produto[]>([]);
+  const buscaRef = useRef<HTMLDivElement>(null);
+
+ useEffect(() => {
+  const grupo = searchParams.get("grupo");
+
+  if (grupo) {
+    setBusca(grupo);
+    setSugestoes([]);
+  }
+}, [searchParams]);
+
+useEffect(() => {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      buscaRef.current &&
+      !buscaRef.current.contains(event.target as Node)
+    ) {
+      setSugestoes([]);
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+
+  return () => {
+    document.removeEventListener(
+      "mousedown",
+      handleClickOutside
+    );
+  };
+}, []);
+
+<div ref={buscaRef} className="relative"></div>
 
 useEffect(() => {
   if (!busca.trim()) {
@@ -30,13 +69,32 @@ useEffect(() => {
     return;
   }
 
-  const resultado = produtos
-    .filter((produto) =>
-      produto.produto?.toLowerCase().includes(busca.toLowerCase())
-    )
-    .slice(0, 8);
+  const gruposUnicos = [
+    ...new Map(
+      produtos
+        .filter((produto) =>
+          produto.grupo
+            ?.toLowerCase()
+            .includes(busca.toLowerCase())
+        )
+        .map((produto) => [
+          produto.grupo,
+          produto,
+        ])
+    ).values(),
+  ];
 
-  setSugestoes(resultado);
+  const grupoUrl = searchParams.get("grupo");
+
+if (
+  grupoUrl &&
+  grupoUrl.toLowerCase() === busca.toLowerCase()
+) {
+  setSugestoes([]);
+} else {
+  setSugestoes(gruposUnicos.slice(0, 8));
+}
+
 }, [busca, produtos]);
 
   useEffect(() => {
@@ -62,7 +120,7 @@ const [pedido, setPedido] = useState<ItemPedido[]>([]);
   const dados = result.data as Produto[];
 
   console.log(dados[0]);
-console.log(dados[1]);
+  console.log(dados[1]);
 
               setProdutos(dados);
           },
@@ -151,7 +209,9 @@ Gostaria de solicitar orçamento para os seguintes produtos:
 ${itens}
 
 Nome:
-Telefone:`
+Telefone:
+Endereço:
+Retirada ( ) ou Entrega ( )`
       : `Olá!
 
 Gostaria de fazer um pedido para entrega dos seguintes produtos:
@@ -160,7 +220,8 @@ ${itens}
 
 Nome:
 Telefone:
-Endereço:`;
+Endereço:
+Retirada ( ) ou Entrega ( )`;
 
   const numero = "553135349488";
 
@@ -190,13 +251,14 @@ const marcas = [
   .sort();
 
     const produtosFiltrados = useMemo(() => {
-    const termo = busca.toLowerCase();
+          
+      const termo = busca.toLowerCase();
 
     return produtos
       .filter((produto) => {
         const buscaOk =
           !busca ||
-          produto.produto?.toLowerCase().includes(termo) ||
+          produto.grupo?.toLowerCase().includes(termo) ||
           produto.marca?.toLowerCase().includes(termo) ||
           produto.categoria?.toLowerCase().includes(termo);
 
@@ -222,6 +284,23 @@ const marcas = [
     categoriaSelecionada,
     marcaSelecionada,
   ]);
+
+   const produtosAgrupados = useMemo(() => {
+  const grupos: Record<string, Produto[]> = {};
+
+  produtosFiltrados.forEach((produto) => {
+    const chave = produto.grupo || produto.produto;
+
+    if (!grupos[chave]) {
+      grupos[chave] = [];
+    }
+
+    grupos[chave].push(produto);
+  });
+
+  return Object.entries(grupos);
+}, [produtosFiltrados]);
+
       const termo = busca.toLowerCase();
 
       const totalItens = pedido.reduce(
@@ -278,7 +357,7 @@ const marcas = [
 
 {busca && (
   <p className="text-sm text-zinc-500">
-    {produtosFiltrados.length} produto(s) encontrado(s)
+    {produtosFiltrados.length} grupo(s) encontrado(s)
   </p>
 )}
 
@@ -289,20 +368,29 @@ const marcas = [
     value={busca}
     onChange={(e) => setBusca(e.target.value)}
     className="w-full rounded-xl border p-3"
+ 
+onKeyDown={(e) => {
+  if (e.key === "Enter") {
+    setSugestoes([]);
+  }
+
+}}
+
   />
 
   {sugestoes.length > 0 && (
     <div className="absolute z-50 mt-1 w-full rounded-lg border bg-white shadow-lg">
       {sugestoes.map((produto) => (
-        <button
+
+<button
           key={produto.codigo}
           onClick={() => {
-            setBusca(produto.produto);
+            setBusca(produto.grupo);
             setSugestoes([]);
           }}
           className="block w-full border-b p-3 text-left hover:bg-zinc-100"
         >
-          {produto.produto}
+          {produto.grupo}
         </button>
       ))}
     </div>
@@ -322,7 +410,13 @@ const marcas = [
                 className="flex items-center justify-between"
               >
                 <div>
-  <strong>{item.produto.produto}</strong>
+  <strong>
+  {item.produto.grupo} - {item.produto.tamanho}
+</strong>
+
+ {/*<div className="text-sm font-semibold text-[#c40000]">
+  R$ {produto.preco}
+</div> */}
 
   <div className="mt-2 flex items-center gap-2">
     <button
@@ -381,12 +475,6 @@ const marcas = [
         </div>
         </div>
       )}
-
-      {!busca && (
-        <div className="text-center text-zinc-500">
-          Digite um produto para pesquisar...
-        </div>
-      )}
       
   {!busca && (
   <div className="text-center text-zinc-500">
@@ -396,54 +484,87 @@ const marcas = [
 
 {busca.trim() && (
   <div className="grid gap-4">
-    {produtosFiltrados.map((produto, index) => (
-      <div
-        key={`${produto.codigo}-${index}`}
-        className="rounded-xl border p-4 shadow-sm hover:border-[#c40000] hover:shadow-md transition"
-      >
-        <h2 className="font-semibold text-lg">
-          {produto.produto}
+ 
+{produtosAgrupados.map(([grupo, itens]) => (
+  <div
+    key={grupo}
+    className="rounded-xl border p-4 shadow-sm hover:border-[#c40000] hover:shadow-md transition"
+  >
+    <div className="flex gap-4">
+
+      <div className="relative h-32 w-32 flex-shrink-0">
+        <Image
+          src={itens[0].imagem || "/produtos/sem-imagem.jpg"}
+          alt={grupo}
+          fill
+          sizes="128px"
+          className="object-contain"
+        />
+      </div>
+
+      <div className="flex-1">
+        <h2 className="font-semibold text-xl">
+          {grupo}
         </h2>
 
-        <p className="text-sm text-zinc-500">
-          Marca: {produto.marca}
+        <p className="mb-3 text-sm text-zinc-500">
+          Marca: {itens[0].marca}
         </p>
 
-        <p className="text-sm text-zinc-500">
-          Categoria: {produto.categoria}
-        </p>
+        <div className="space-y-2">
+          
+{itens.map((produto) => {
+  const quantidadeNoCarrinho =
+    pedido.find(
+      (item) => item.produto.codigo === produto.codigo
+    )?.quantidade || 0;
 
-        <p className="text-sm font-medium">
-          {Number(produto.estoque || 0) > 0 ? (
-            <span className="text-green-600">
-              ✅ Disponível
-            </span>
-          ) : (
-            <span className="text-red-600">
-              ❌ Sem estoque
-            </span>
-          )}
-        </p>
+  return (
 
-        <p className="text-sm text-zinc-500">
-          Estoque: {produto.estoque}
-        </p>
+            <div
+              key={produto.codigo}
+              className="flex items-center justify-between rounded border p-2"
+            >
+              <div>
+  <div>
+  <strong>{produto.tamanho}</strong>
 
-        <button
-          disabled={Number(produto.estoque || 0) <= 0}
-          onClick={() => adicionarAoPedido(produto)}
-          className={`mt-3 rounded-lg px-4 py-2 text-white ${
-            Number(produto.estoque || 0) > 0
-              ? "bg-[#c40000]"
-              : "bg-zinc-400 cursor-not-allowed"
-          }`}
-        >
-          {Number(produto.estoque || 0) > 0
-            ? "➕ Adicionar ao Pedido"
-            : "❌ Sem Estoque"}
-        </button>
+  <div className="text-sm text-zinc-500">
+    Estoque: {produto.estoque}
+  </div>
+
+  {quantidadeNoCarrinho > 0 && (
+    <div className="text-sm font-semibold text-green-600">
+      No carrinho: {quantidadeNoCarrinho}
+    </div>
+  )}
+</div>
+
+              </div>
+
+              <button
+                disabled={Number(produto.estoque || 0) <= 0}
+                onClick={() => adicionarAoPedido(produto)}
+                className={`rounded-lg px-3 py-2 text-white ${
+                  Number(produto.estoque || 0) > 0
+                    ? "bg-[#c40000]"
+                    : "bg-zinc-400 cursor-not-allowed"
+                }`}
+              >
+                {Number(produto.estoque || 0) > 0
+                  ? "➕ Adicionar"
+                  : "❌ Sem Estoque"}
+              </button>
+            </div>
+  );  
+})}
+        </div>
       </div>
-    ))}
+
+    </div>
+  </div>
+))}
+
   </div>
 )}
     </div>
