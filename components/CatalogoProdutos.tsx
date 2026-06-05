@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Papa from "papaparse";
 import Image from "next/image";
 import { useRef } from "react";
-{/*import { useSearchParams } from "next/navigation";*/}
+import { useSearchParams } from "next/navigation";
 
 type Produto = {
   codigo: string;
@@ -24,7 +24,7 @@ type ItemPedido = {
 };
 
 export default function CatalogoProdutos() {
- /* const searchParams = useSearchParams();*/
+  const searchParams = useSearchParams();
   const [produtos, setProdutos] = useState<Produto[]>([]);
   const [busca, setBusca] = useState("");
   const [categoriaSelecionada, setCategoriaSelecionada] = useState("");
@@ -32,7 +32,7 @@ export default function CatalogoProdutos() {
   const [sugestoes, setSugestoes] = useState<Produto[]>([]);
   const buscaRef = useRef<HTMLDivElement>(null);
 
- *useEffect(() => {
+ useEffect(() => {
   const grupo = searchParams.get("grupo");
 
   if (grupo) {
