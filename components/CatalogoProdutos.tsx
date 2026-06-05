@@ -314,6 +314,11 @@ const promocoes = useMemo(() => {
   );
 }, [produtos]);
 
+useEffect(() => {
+  console.log("PROMOÇÕES:", promocoes.length);
+  console.log(promocoes);
+}, [promocoes]);
+
   const grupos: Record<string, Produto[]> = {};
 
   produtosFiltrados.forEach((produto) => {
