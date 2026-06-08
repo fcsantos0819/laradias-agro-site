@@ -17,7 +17,7 @@ type Produto = {
   estoque?: string;
   imagem?: string;
   promocao?: string;
-  precoPromocional?: string;
+  precopromocional?: string;
 };
 
 type ItemPedido = {
@@ -141,6 +141,22 @@ const [pedido, setPedido] = useState<ItemPedido[]>([]);
   console.log(dados[1]);
 
               setProdutos(dados);
+
+console.log(
+  dados.filter(
+    (p) =>
+      p.promocao &&
+      p.promocao.trim().toUpperCase() === "SIM"
+  )
+);
+
+console.log(
+  dados.map((p) => ({
+    produto: p.produto,
+    promocao: p.promocao,
+  }))
+);
+
           },
         });
       });
