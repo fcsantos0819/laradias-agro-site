@@ -1,14 +1,17 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Benefits from "@/components/Benefits";
 import Categories from "@/components/Categories";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+
 
 export default function Home() {
   return (
     <>
       <Header />
       <Hero />
+      <Benefits />
       <Categories />
 
       <section className="mx-auto mt-16 max-w-7xl px-6">
@@ -24,13 +27,14 @@ export default function Home() {
             className="rounded-xl border p-4 shadow transition hover:border-[#c40000] hover:shadow-xl"
           >
             <img
-              src="/produtos/special-dog-adulto.jpg"
-              alt="Special Dog Adulto"
+              src="/produtos/quatree-hotdog-racas-grandes.jpg"
+              alt="Quatree HotDog Raças Grandes"
              className="mx-auto h-48 w-full object-contain"
             />
 
             <h3 className="mt-3 text-center font-semibold">
-              Special Dog Adulto
+              
+              Quatree HotDog Raças Grandes
             </h3>
           </a>
 

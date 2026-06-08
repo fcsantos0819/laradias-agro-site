@@ -321,7 +321,14 @@ const marcas = [
     marcaSelecionada,
   ]);
 
-   const produtosAgrupados = useMemo(() => {
+/*   const produtosAgrupados = useMemo(() => {
+
+const promocoes = useMemo(() => {
+  return produtos.filter(
+    (produto) =>
+      produto.promocao?.toUpperCase() === "SIM"
+  );
+}, [produtos]);*/
 
 const promocoes = useMemo(() => {
   return produtos.filter(
@@ -330,11 +337,7 @@ const promocoes = useMemo(() => {
   );
 }, [produtos]);
 
-useEffect(() => {
-  console.log("PROMOÇÕES:", promocoes.length);
-  console.log(promocoes);
-}, [promocoes]);
-
+const produtosAgrupados = useMemo(() => {
   const grupos: Record<string, Produto[]> = {};
 
   produtosFiltrados.forEach((produto) => {
@@ -350,7 +353,10 @@ useEffect(() => {
   return Object.entries(grupos);
 }, [produtosFiltrados]);
 
-      const termo = busca.toLowerCase();
+useEffect(() => {
+  console.log("PROMOÇÕES:", promocoes.length);
+  console.log(promocoes);
+}, [promocoes]);
 
       const totalItens = pedido.reduce(
         (total, item) => total + item.quantidade,

@@ -7,9 +7,9 @@ export const promocoes = [
   },
 
   {
-    grupo: "Special Dog Adulto",
+    grupo: "Quatree HotDog Raças Grandes",
     preco: "99,90",
     precoAnterior: "119,90",
-    imagem: "/produtos/special-dog-adulto.jpg",
+    imagem: "/produtos/quatree-hotdog-racas-grandes.jpg",
   },
 ];

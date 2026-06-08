@@ -5,7 +5,11 @@ export default function Hero() {
     <section className="bg-gradient-to-br from-[#be0000] via-[#d10000] to-[#8f0000] text-white">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-10 lg:grid-cols-2 lg:items-center lg:py-16">
         <div>
-          <div className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium">
+          
+          <div className="lg:-translate-y-6">
+          <div className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium"></div>
+                  
+          {/*</div><div className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium">*/}
             Loja completa para pet, agro e jardinagem
           </div>
           <h1 className="mt-6 text-4xl font-black leading-tight tracking-tight sm:text-5xl lg:text-6xl">
@@ -36,8 +40,10 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 shadow-2xl">
-          <div className="flex aspect-[4/3] items-center justify-center bg-white p-6">
+        {/*<div className="overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 shadow-2xl">*/}
+        <div className="mx-auto max-w-[520px] overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 shadow-2xl">
+        
+          <div className="flex aspect-[4/3] items-center justify-center bg-white p-10">
             <div className="relative h-full w-full">
               <Image
                 src="/fachada.jpg"
