@@ -76,7 +76,7 @@ export default function StoreSlider() {
             </p>
 
             <div className="mt-8 space-y-4">
-              <div>✅ Loja física em Betim</div>
+              <div>✅ Loja física em São Joaquim de Bicas</div>
               <div>✅ Produtos para pets e agropecuária</div>
               <div>✅ Equipamentos STIHL</div>
               <div>✅ Atendimento especializado</div>
