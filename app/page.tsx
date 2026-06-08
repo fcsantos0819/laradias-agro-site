@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Benefits from "@/components/Benefits";
+import StoreSlider from "@/components/StoreSlider";
 import Categories from "@/components/Categories";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
@@ -12,8 +13,8 @@ export default function Home() {
       <Header />
       <Hero />
       <Benefits />
+      <StoreSlider />
       <Categories />
-
       <section className="mx-auto mt-16 max-w-7xl px-6">
         <h2 className="mb-6 text-3xl font-bold text-[#c40000]">
           ⭐ Produtos em Destaque
